@@ -1,0 +1,290 @@
+/* Custom Properties */
+
+/* ... */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Inter', sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1;
+}
+
+section {
+  width: 85%;
+}
+
+.text-accent {
+  color: #EF8354;
+}
+
+/* Utility Classes */
+
+/* ... */
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  background-color: #2D3142;
+  color: white;
+  padding: 0 1.5%;
+  width: 100%;
+  min-width: 40rem;
+  height: 55px;
+}
+
+.header-logo-container {
+  width: 243px;
+  /*! watch out for bugs */
+  flex-shrink: 0;
+}
+
+.logo {
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  cursor: pointer;
+}
+
+.nav-container {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+
+}
+
+.nav-item {
+  font-style: italic;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+}
+
+.nav-item:nth-of-type(6) {
+  margin-left: auto;
+}
+
+.nav-icons {
+  width: 1.5rem;
+}
+
+/* ... */
+
+/* HERO*/
+.hero {
+  background-image: url("../images/hero-image1.jpg");
+  width: 100%;
+  height: 1000px;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 16px;
+  text-align: start;
+  /* height: 1000px; */
+}
+
+.hero h1 {
+  letter-spacing: 0.245em;
+  font-weight: 750;
+  font-size: 5rem;
+}
+
+.hero p {
+  width: 50%;
+  margin-top: 13px;
+}
+
+
+/* ... */
+
+/* Product Section */
+.product {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  background-color: #4F5D75;
+  gap: 20px;
+  padding: 50px;
+}
+
+.product-text {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.4rem;
+  margin: 50px 0;
+}
+
+.product-text h2 {
+  text-shadow: -2px 3px 15px black;
+}
+
+.product-text p {
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.product-card {
+  background-color: #BFC0C0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-card h4 {
+  text-align: center;
+  font-size: 1rem;
+  color: #2D3142;
+}
+
+.product-card p {
+  font-size: 0.7rem;
+  color: #4F5D75;
+}
+
+.add-to-cart {
+  width: 136px;
+  height: 30px;
+  background: #EF8354;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font: 1rem;
+  font-weight: 550;
+}
+
+/* ... */
+
+
+/* footer section */
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+
+  background-color: #2D3142;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.footer-container h4 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.footer-container a {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/*! Test styles */
+.footer-newsletter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 10px;
+  border: 1px white solid;
+}
+
+label{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.email {
+  border: none;
+  background-color: transparent;
+  width: 220px;
+  color: white;
+}
+
+
+.submit {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
