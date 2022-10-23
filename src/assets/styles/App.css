@@ -77,6 +77,9 @@ header {
   width: 100%;
   min-width: 40rem;
   height: 55px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .header-logo-container {
@@ -252,7 +255,7 @@ footer {
 }
 
 /*! Test styles */
-.footer-newsletter{
+.footer-newsletter {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,7 +273,7 @@ form {
   border: 1px white solid;
 }
 
-label{
+label {
   font-size: 1rem;
   font-weight: 400;
 }
