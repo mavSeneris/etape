@@ -14,13 +14,13 @@ function App() {
     products.map((item) => {
       if (item.id === id) {
         setBag(currentBag =>
-          [...currentBag, item.name, item.price]
+          [...currentBag, item]
         )
       }
     })
   }
 
-  console.log(bag)
+  console.dir(bag)
 
 
 
