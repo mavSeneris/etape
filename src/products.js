@@ -1,5 +1,8 @@
+import { nanoid } from "nanoid"
+
 export default [
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         gender: "men",
         onSale: true,
@@ -32,6 +35,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey1.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -64,6 +68,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey2.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -96,6 +101,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey3.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -128,6 +134,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey4.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -160,6 +167,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey5.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -192,6 +200,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey6.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -224,6 +233,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey7.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -256,6 +266,7 @@ export default [
         mainImage: "../src/assets/images/mens-jersey8.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -288,6 +299,7 @@ export default [
         mainImage: "../src/assets/images/womens-jersey1.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -320,6 +332,7 @@ export default [
         mainImage: "../src/assets/images/womens-jersey2.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -352,6 +365,7 @@ export default [
         mainImage: "../src/assets/images/womens-jersey3.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -384,6 +398,7 @@ export default [
         mainImage: "../src/assets/images/womens-jersey4.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -416,6 +431,7 @@ export default [
         mainImage: "../src/assets/images/womens-jersey6.png"
     },
     {
+        id: nanoid(),
         name: "Hex Pro Jersey",
         onSale: true,
         outOfStock: false,
@@ -447,5 +463,5 @@ export default [
         altImage: "../src/assets/images/womens-alt7.png",
         mainImage: "../src/assets/images/womens-jersey7.png"
     },
-  
+
 ]

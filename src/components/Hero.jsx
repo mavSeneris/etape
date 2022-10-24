@@ -1,7 +1,6 @@
 import React from "react";
 import heroImage from "../assets/images/hero-image1.jpg"
 
-
 export default function Hero(){
     
     
@@ -15,4 +14,3 @@ export default function Hero(){
         </section>
     )
 }
-

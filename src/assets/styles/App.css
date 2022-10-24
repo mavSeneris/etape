@@ -210,7 +210,6 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding-bottom: 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -225,7 +224,7 @@ header {
   color: #4F5D75;
 }
 
-.add-to-cart {
+.add-to-bag {
   width: 136px;
   height: 30px;
   background: #EF8354;
