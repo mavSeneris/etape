@@ -7,7 +7,7 @@ import products from "./products"
 import Footer from "./components/Footer.jsx"
 
 function App() {
-  const [bag, setBag] = useState(()=> JSON.parse(localStorage.getItem('bag')) || []);
+  const [bag, setBag] = useState(() => JSON.parse(localStorage.getItem('bag')) || []);
 
   useEffect(() => {
     localStorage.setItem('bag', JSON.stringify(bag));
@@ -23,7 +23,7 @@ function App() {
     })
   }
 
-  console.log(bag)
+  console.info(bag)
 
 
 
@@ -42,7 +42,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header 
+        bag={bag}
+      />
       <Hero />
       <section className="product">
         <div className="product-text">

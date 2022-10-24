@@ -4,7 +4,7 @@ import searchIcon from "../assets/icons/search-icon.png"
 import userIcon from "../assets/icons/user-icon.png"
 
 
-export default function Header(){
+export default function Header(props){
     
     
     return(
@@ -23,6 +23,7 @@ export default function Header(){
                     <li className="nav-item"><img src={userIcon} className="nav-icons"/></li>
                     <li className="nav-item"><img src={shopIcon} className="nav-icons"/></li>
                 </ul>
+                {props.bag.length > 0 && <div className="bag-counter">{props.bag.length}</div>}
             </nav>
         </header>
     )

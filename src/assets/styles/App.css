@@ -96,6 +96,7 @@ header {
 }
 
 .nav-container {
+  position: relative;
   width: 100%;
 }
 
@@ -121,6 +122,23 @@ header {
 
 .nav-icons {
   width: 1.5rem;
+}
+
+.bag-counter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF8354;
+  border: 1px solid #EF8354;
+  border-radius: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding-right: 0.7px;
+  bottom: 18px;
+  right: -5px;
 }
 
 /* ... */
