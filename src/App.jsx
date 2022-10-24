@@ -6,17 +6,20 @@ import Products from "./components/Product.jsx"
 import Footer from "./components/Footer.jsx"
 
 
+
+
 function App() {
-  
+
 
   return (
     <div className="App">
       <Header />
       <Hero />
-      <Products/>
-      <Footer/>
+      <Products />
+      <Footer />
     </div>
   )
 }
 
 export default App
+
