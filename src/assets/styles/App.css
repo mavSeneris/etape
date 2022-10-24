@@ -233,6 +233,22 @@ header {
   border: none;
   font: 1rem;
   font-weight: 550;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.add-to-bag:focus {
+  outline: none;
+}
+
+.add-to-bag:hover{
+  background-color: #c66840;
+  transition-duration: 0.2s;
+  color: white;
+}
+
+.add-to-bag:active {
+  transform: translateY(1.5px);
 }
 
 /* ... */
