@@ -175,11 +175,11 @@ header {
   padding: 50px;
 }
 
-.card-image{
-  height: 75%
+.card-image {
+  height: 100%;
 }
 
-.card-image img{
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -194,16 +194,6 @@ header {
   margin: 50px 0;
 }
 
-.product-text h2 {
-  text-shadow: -2px 3px 15px black;
-}
-
-.product-text p {
-  margin-top: 10px;
-  font-style: italic;
-  font-weight: 300;
-}
-
 .product-card {
   background-color: #BFC0C0;
   display: flex;
@@ -213,25 +203,36 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* product name */
 .product-card h4 {
   text-align: center;
   font-size: 1rem;
   color: #2D3142;
 }
 
+/* product gender */
+.product-card h5 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #2D3142;
+}
+
+/* product price */
 .product-card p {
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   color: #4F5D75;
 }
 
 .add-to-bag {
-  width: 136px;
-  height: 30px;
+  width: 60%;
+  height: 3.9rem;
+  margin: 7% 15%;
   background: #EF8354;
   color: white;
   border-radius: 8px;
   border: none;
-  font: 1rem;
   font-weight: 550;
   cursor: pointer;
   transition-duration: 0.2s;
@@ -241,7 +242,7 @@ header {
   outline: none;
 }
 
-.add-to-bag:hover{
+.add-to-bag:hover {
   background-color: #c66840;
   transition-duration: 0.2s;
   color: white;

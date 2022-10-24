@@ -3,7 +3,7 @@ import { nanoid } from "nanoid"
 export default [
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Alt_Road 1/2 Zip Jersey Black",
         gender: "men",
         onSale: true,
         outOfStock: false,
@@ -29,14 +29,14 @@ export default [
                 quantity: 200
             }
         ],
-        price: 200.00,
+        price: 240.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt1.png",
         mainImage: "../src/assets/images/mens-jersey1.png"
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Alt_Road 1/2 Zip Jersey Green",
         onSale: true,
         outOfStock: false,
         price: 250.00,
@@ -69,10 +69,10 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Alt_Road Jersey Grey",
         onSale: true,
         outOfStock: false,
-        price: 250.00,
+        price: 230.00,
         gender: "men",
         stocks: [
             {
@@ -102,7 +102,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Axis Pro Jersey Pink",
         onSale: true,
         outOfStock: false,
         gender: "men",
@@ -135,7 +135,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Emblem Pro Hex Jersey Mocha",
         onSale: true,
         outOfStock: false,
         gender: "men",
@@ -168,7 +168,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Emblem Pro Hex Jersey White",
         onSale: true,
         outOfStock: false,
         gender: "men",
@@ -201,7 +201,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Shift Pro Base Jersey Green",
         onSale: true,
         outOfStock: false,
         gender: "men",
@@ -234,7 +234,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Shift Pro Base Jersey Orange",
         onSale: true,
         outOfStock: false,
         gender: "men",
@@ -267,7 +267,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Emblem Pro Hex Jersey Lime",
         onSale: true,
         outOfStock: false,
         gender: "women",
@@ -300,7 +300,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Alt_Road Jersey Off White",
         onSale: true,
         outOfStock: false,
         gender: "women",
@@ -333,7 +333,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Emblem Pro Hex Jersey Black",
         onSale: true,
         outOfStock: false,
         gender: "women",
@@ -366,7 +366,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Alt_Road Jersey Dark Grey",
         onSale: true,
         outOfStock: false,
         gender: "women",
@@ -399,7 +399,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Evolve Pro Air Jersey Pink",
         onSale: true,
         outOfStock: false,
         gender: "women",
@@ -432,7 +432,7 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Hex Pro Jersey",
+        name: "Women's Loop Pro Jersey Peach",
         onSale: true,
         outOfStock: false,
         gender: "women",
