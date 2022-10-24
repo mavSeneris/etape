@@ -6,9 +6,11 @@ export default function Product() {
 
     const productCard = products.map(product => {
         return <div className="product-card">
-            <img src={products[0].altImage} />
-            <h4>{products[0].name}</h4>
-            <p>${products[0].price}</p>
+            <div className="card-image">
+                <img src={product.altImage} />
+            </div>
+            <h4>{product.name}</h4>
+            <p>${product.price}</p>
             <button className="add-to-cart">add to cart</button>
         </div>
     })
@@ -16,7 +18,7 @@ export default function Product() {
     return (
         <section className="product">
             {productCard}
-            
+
         </section>
     )
 }
