@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./assets/styles/App.css"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -7,8 +7,11 @@ import products from "./products"
 import Footer from "./components/Footer.jsx"
 
 function App() {
-  const [bag, setBag] = useState([]);
+  const [bag, setBag] = useState(()=> JSON.parse(localStorage.getItem('bag')) || []);
 
+  useEffect(() => {
+    localStorage.setItem('bag', JSON.stringify(bag));
+  }, [bag])
 
   function addToBag(id) {
     products.map((item) => {
@@ -20,7 +23,7 @@ function App() {
     })
   }
 
-  console.dir(bag)
+  console.log(bag)
 
 
 
