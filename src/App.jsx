@@ -54,13 +54,10 @@ function App() {
         bag={bag}
         bagShown={bagShown}
         toggleShoppingBag={toggleShoppingBag}
-      />
-      <Hero 
-        bag={bag}
-        bagShown={bagShown}
         deleteBagItem={deleteBagItem}
-        toggleShoppingBag={toggleShoppingBag}
+
       />
+      <Hero />
       <section className="product">
         <div className="product-text">
           <h2>GET READY FOR NEW SEASON SUCCESS</h2>
