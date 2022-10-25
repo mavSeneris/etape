@@ -12,14 +12,27 @@ import { nanoid } from "nanoid";
 export default function Header(props) {
 
     const itemElement = props.bag.map(item =>
-        <div className="bag-item-container" key={nanoid()}>
-            <img src={item.mainImage} className="bag-item-image" />
+        <div
+            className="bag-item-container"
+            key={nanoid()}
+        >
+            <img
+                src={item.mainImage}
+                className="bag-item-image"
+
+            />
+
             <div className="shopping-bag-item-text">
                 <h5>{item.name}</h5>
                 <p>{item.gender}</p>
                 <p className="price">{`$${item.price}.00`}</p>
             </div>
-            <img onClick={(event) => props.deleteBagItem(event, item.id)} src={deleteIcon} className="delete-icon" />
+
+            <img
+                onClick={(event) => props.deleteBagItem(event, item.id)}
+                src={deleteIcon}
+                className="delete-icon"
+            />
         </div>
     );
 
@@ -76,7 +89,7 @@ export default function Header(props) {
                         <div className="items-total-price-container">
                             <div className="items-text-wrapper">
                                 <p>Bag total:</p>
-                                <p> Delivery</p>
+                                <p>Delivery</p>
                             </div>
                             <div className="items-text-wrapper">
                                 <p>${props.totalPrice}.00</p>

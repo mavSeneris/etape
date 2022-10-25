@@ -5,7 +5,6 @@ import Hero from "./components/Hero"
 import Card from "./components/Card"
 import products from "./products"
 import Footer from "./components/Footer.jsx"
-import { nanoid } from "nanoid";
 
 function App() {
   const [bag, setBag] = useState(() => JSON.parse(localStorage.getItem('bag')) || []);
@@ -15,6 +14,13 @@ function App() {
   useEffect(() => {
     localStorage.setItem('bag', JSON.stringify(bag));
   }, [bag])
+
+  useEffect(() => {
+    const initialValue = 0
+    const total = bag.reduce((accumulator, current) =>
+      accumulator + current.price, initialValue)
+    setTotalPrice(total)
+  })
 
   function addToBag(id) {
     products.map((item) => {
@@ -26,66 +32,50 @@ function App() {
     })
   }
 
-  console.log(bag)
+  function toggleShoppingBag() {
+    setBagShown(prevBagShown => !prevBagShown)
+  }
 
-  useEffect(() => {
-    const initialValue = 0
-    const total = bag.reduce((accumulator, current) => accumulator + current.price, initialValue)
-    setTotalPrice(total)
-  })
+  function deleteBagItem(event, itemId) {
+    event.stopPropagation()
+    setBag(prevBag => prevBag.filter(item => item.id !== itemId)
+    )
+  }
 
-  console.log(totalPrice)
-
-
-
-
-
-
-function toggleShoppingBag() {
-  setBagShown(prevBagShown => !prevBagShown)
-}
-
-function deleteBagItem(event, itemId) {
-  event.stopPropagation()
-  setBag(prevBag => prevBag.filter(item => item.id !== itemId)
-  )
-}
-
-const productCard = products.map(product =>
-  <Card
-    key={product.id}
-    altImage={product.altImage}
-    mainImage={product.altImage}
-    name={product.name}
-    gender={product.gender}
-    price={product.price}
-    addToBag={() => addToBag(product.id)}
-  />
-);
-
-return (
-  <div className="App">
-
-    <Header
-      bag={bag}
-      bagShown={bagShown}
-      toggleShoppingBag={toggleShoppingBag}
-      deleteBagItem={deleteBagItem}
-      totalPrice={totalPrice}
-
+  const productCard = products.map(product =>
+    <Card
+      key={product.id}
+      altImage={product.altImage}
+      mainImage={product.altImage}
+      name={product.name}
+      gender={product.gender}
+      price={product.price}
+      addToBag={() => addToBag(product.id)}
     />
-    <Hero />
-    <section className="product">
-      <div className="product-text">
-        <h2>GET READY FOR NEW SEASON SUCCESS</h2>
-        <p>The new season colours have landed.</p>
-      </div>
-      {productCard}
-    </section>
-    <Footer />
+  );
 
-  </div>
-)
+  return (
+    <div className="App">
+
+      <Header
+        bag={bag}
+        bagShown={bagShown}
+        toggleShoppingBag={toggleShoppingBag}
+        deleteBagItem={deleteBagItem}
+        totalPrice={totalPrice}
+      />
+      <Hero />
+      <section className="product">
+        <div className="product-text">
+          <h2>GET READY FOR NEW SEASON SUCCESS</h2>
+          <p>The new season colours have landed.</p>
+        </div>
+        {productCard}
+      </section>
+      <Footer />
+
+    </div>
+  )
 }
 
 export default App
