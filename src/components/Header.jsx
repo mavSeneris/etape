@@ -79,7 +79,7 @@ export default function Header(props) {
                                 <p> Delivery</p>
                             </div>
                             <div className="items-text-wrapper">
-                                <p>$590.00</p>
+                                <p>${props.totalPrice}.00</p>
                                 <p>$4.59</p>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ export default function Header(props) {
                                 <h4>Subtotal:</h4>
                             </div>
                             <div className="items-text-wrapper">
-                                <h4>$594.90</h4>
+                                <h4>{`$${props.totalPrice + 4.59}`}</h4>
                             </div>
                         </div>
                         <div className="button-center">
