@@ -65,7 +65,9 @@ section {
 
 /* ... */
 
-/* HEADER */
+
+
+/** HEADER */
 header {
   display: flex;
   justify-content: center;
@@ -143,7 +145,7 @@ header {
 
 /* ... */
 
-/* HERO*/
+/** HERO*/
 .hero {
   background-image: url("../images/hero-image1.jpg");
   width: 100%;
@@ -182,7 +184,7 @@ header {
 
 /* ... */
 
-/* Product Section */
+/** PRODUCTS */
 .product {
   width: auto;
   display: grid;

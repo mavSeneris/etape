@@ -1,0 +1,110 @@
+.shopping-bag-container {
+    position: fixed;
+    margin-top: 65px;
+    left: 66%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #2D3142;
+    color: white;
+    width: 400px;
+    border-radius: 10px;
+    padding: 15px;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shopping-bag-container h4 {
+    text-align: justify;
+    margin: 7px 0;
+}
+
+.bag-item-container {
+    display: flex;
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 15px;
+}
+
+.bag-item-image {
+    width: 25%;
+    border-radius: 10px;
+}
+
+.shopping-bag-item-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.shopping-bag-item-text h5 {
+    font-weight: 700;
+    width: 150px;
+    line-height: 1;
+}
+
+.shopping-bag-item-text p {
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.back-arrow-icon {
+    width: 25px;
+
+}
+
+.delete-icon {
+    position: relative;
+    left: 60px;
+    bottom: 8px;
+    width: 20px;
+    height: 20px;
+    fill: whitesmoke;
+}
+
+.price {
+    padding-top: 40px;
+}
+
+.items-total-price-container {
+    margin: 15px 0 10px 0;
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.items-total-price-container p {
+    width: auto;
+    margin: 0;
+    text-align: start;
+}
+
+.sub-total {
+    border-top: 1px solid #bfc0c06e;
+}
+
+.sub-total h4 {
+    padding-top: 6px;
+}
+
+.button-center{
+    height: 65px;
+    margin-bottom: 10px;
+}
+
+.checkout-button {
+    width: 60%;
+    height: 2.5rem;
+    margin: 7% 15%;
+    background: #EF8354;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 550;
+}
