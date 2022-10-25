@@ -52,7 +52,7 @@ export default function Hero(props) {
                         <h4>$594.90</h4>
                     </div>
                 </div>
-                <div class="button-center">
+                <div className="button-center">
                     <button className="checkout-button">Proceed to Checkout</button>
                 </div>
             </div>}
