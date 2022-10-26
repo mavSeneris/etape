@@ -5,6 +5,7 @@ export default [
         id: nanoid(),
         name: "Alt_Road 1/2 Zip Jersey Black",
         gender: "men",
+        viewAll: "all",
         onSale: true,
         outOfStock: false,
         quntity: 0,
@@ -16,30 +17,18 @@ export default [
     },
     {
         id: nanoid(),
-        name: "Alt_Road 1/2 Zip Jersey Green",
+        name: "Women's Loop Pro Jersey Peach",
         onSale: true,
         outOfStock: false,
+        gender: "women",
         quntity: 0,
         size: ["s"],
-        price: 250.00,
-        gender: "men",
+        price: 290.00,
         description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/mens-alt3.png",
-        mainImage: "../src/assets/images/mens-jersey3.png"
+        altImage: "../src/assets/images/womens-alt7.png",
+        mainImage: "../src/assets/images/womens-jersey7.png"
     },
-    {
-        id: nanoid(),
-        name: "Axis Pro Jersey Pink",
-        onSale: true,
-        outOfStock: false,
-        gender: "men",
-        quntity: 0,
-        size: ["s"],
-        price: 300.00,
-        description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/mens-alt4.png",
-        mainImage: "../src/assets/images/mens-jersey4.png"
-    },
+
     {
         id: nanoid(),
         name: "Emblem Pro Hex Jersey Mocha",
@@ -52,6 +41,19 @@ export default [
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt5.png",
         mainImage: "../src/assets/images/mens-jersey5.png"
+    },
+    {
+        id: nanoid(),
+        name: "Alt_Road Jersey Dark Grey",
+        onSale: true,
+        outOfStock: false,
+        gender: "women",
+        quntity: 0,
+        size: ["xl"],
+        price: 290.00,
+        description: "Aerodynamic race specific jersey",
+        altImage: "../src/assets/images/womens-alt4.png",
+        mainImage: "../src/assets/images/womens-jersey4.png"
     },
     {
         id: nanoid(),
@@ -120,6 +122,19 @@ export default [
     },
     {
         id: nanoid(),
+        name: "Axis Pro Jersey Pink",
+        onSale: true,
+        outOfStock: false,
+        gender: "men",
+        quntity: 0,
+        size: ["s"],
+        price: 300.00,
+        description: "Aerodynamic race specific jersey",
+        altImage: "../src/assets/images/mens-alt4.png",
+        mainImage: "../src/assets/images/mens-jersey4.png"
+    },
+    {
+        id: nanoid(),
         name: "Emblem Pro Hex Jersey Black",
         onSale: true,
         outOfStock: false,
@@ -131,18 +146,19 @@ export default [
         altImage: "../src/assets/images/womens-alt3.png",
         mainImage: "../src/assets/images/womens-jersey3.png"
     },
+
     {
         id: nanoid(),
-        name: "Alt_Road Jersey Dark Grey",
+        name: "Alt_Road 1/2 Zip Jersey Green",
         onSale: true,
         outOfStock: false,
-        gender: "women",
         quntity: 0,
-        size: ["xl"],
-        price: 290.00,
+        size: ["s"],
+        price: 250.00,
+        gender: "men",
         description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/womens-alt4.png",
-        mainImage: "../src/assets/images/womens-jersey4.png"
+        altImage: "../src/assets/images/mens-alt3.png",
+        mainImage: "../src/assets/images/mens-jersey3.png"
     },
     {
         id: nanoid(),
@@ -157,18 +173,6 @@ export default [
         altImage: "../src/assets/images/womens-alt6.png",
         mainImage: "../src/assets/images/womens-jersey6.png"
     },
-    {
-        id: nanoid(),
-        name: "Women's Loop Pro Jersey Peach",
-        onSale: true,
-        outOfStock: false,
-        gender: "women",
-        quntity: 0,
-        size: ["s"],
-        price: 290.00,
-        description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/womens-alt7.png",
-        mainImage: "../src/assets/images/womens-jersey7.png"
-    },
+
 
 ]

@@ -33,8 +33,7 @@ function App() {
     })
   }
 
-  
-  function setGender(value) {
+  function setCategoryBy(value) {
     if (value === "women") {
       setViewProductBy("women")
     }
@@ -62,7 +61,7 @@ function App() {
         return <Card
           key={item.id}
           altImage={item.altImage}
-          mainImage={item.altImage}
+          mainImage={item.mainImage}
           name={item.name}
           gender={item.gender}
           price={item.price}
@@ -73,7 +72,7 @@ function App() {
         return <Card
           key={item.id}
           altImage={item.altImage}
-          mainImage={item.altImage}
+          mainImage={item.mainImage}
           name={item.name}
           gender={item.gender}
           price={item.price}
@@ -81,7 +80,6 @@ function App() {
         />
       }
     })
-
 
   return (
     <div className="App">
@@ -100,9 +98,21 @@ function App() {
           <p>The new season colours have landed.</p>
         </div>
         <div className="product-sort">
-          <p onClick={() => setGender("all")}>All</p>
-          <p onClick={() => setGender("men")}>Men</p>
-          <p onClick={() => setGender("women")}>Women</p>
+          <p
+            style={{ color: viewProductBy === "all" ? "#EF8354" : "white" }}
+            onClick={() => setCategoryBy("all")}>
+            All
+          </p>
+          <p
+            style={{ color: viewProductBy === "men" ? "#EF8354" : "white" }}
+            onClick={() => setCategoryBy("men")}>
+            Men
+          </p>
+          <p
+            style={{ color: viewProductBy === "women" ? "#EF8354" : "white" }}
+            onClick={() => setCategoryBy("women")}>
+            Women
+          </p>
         </div>
         {productCard}
       </section>
@@ -113,4 +123,3 @@ function App() {
 }
 
 export default App
-
