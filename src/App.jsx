@@ -51,24 +51,13 @@ function App() {
 
   function deleteBagItem(event, itemId) {
     event.stopPropagation()
-    setBag(prevBag => prevBag.filter(item => item.id !== itemId)
-    )
+    setBag(prevBag =>
+      prevBag.filter(item => item.id !== itemId))
   }
 
   const productCard =
     products.map((item) => {
-      if (item.gender === viewProductBy) {
-        return <Card
-          key={item.id}
-          altImage={item.altImage}
-          mainImage={item.mainImage}
-          name={item.name}
-          gender={item.gender}
-          price={item.price}
-          addToBag={() => addToBag(item.id)}
-        />
-      }
-      else if (viewProductBy === "all") {
+      if (item.gender === viewProductBy || viewProductBy === "all") {
         return <Card
           key={item.id}
           altImage={item.altImage}
