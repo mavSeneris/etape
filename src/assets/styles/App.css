@@ -273,6 +273,23 @@ header {
   transform: translateY(1.5px);
 }
 
+.product-sort{
+  display: flex;
+  color:white;
+  grid-column: 1 / -1;
+  gap: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.product-sort p{
+  font-weight: 700;
+}
+
+.product-sort p:hover{
+  color: #c66840;
+}
+
 /* ... */
 
 

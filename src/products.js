@@ -7,28 +7,8 @@ export default [
         gender: "men",
         onSale: true,
         outOfStock: false,
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["m"],
         price: 240.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt1.png",
@@ -39,63 +19,10 @@ export default [
         name: "Alt_Road 1/2 Zip Jersey Green",
         onSale: true,
         outOfStock: false,
+        quntity: 0,
+        size: ["s"],
         price: 250.00,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
-        description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/mens-alt2.png",
-        mainImage: "../src/assets/images/mens-jersey2.png"
-    },
-    {
-        id: nanoid(),
-        name: "Alt_Road Jersey Grey",
-        onSale: true,
-        outOfStock: false,
-        price: 230.00,
-        gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt3.png",
         mainImage: "../src/assets/images/mens-jersey3.png"
@@ -106,28 +33,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["s"],
         price: 300.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt4.png",
@@ -139,28 +46,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["l"],
         price: 150.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt5.png",
@@ -172,28 +59,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["l"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt6.png",
@@ -205,28 +72,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["m"],
         price: 200.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt7.png",
@@ -238,28 +85,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "men",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["m"],
         price: 150.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/mens-alt8.png",
@@ -271,28 +98,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["xs"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt1.png",
@@ -304,28 +111,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["xs"],
         price: 150.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt2.png",
@@ -337,28 +124,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["s"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt3.png",
@@ -370,28 +137,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["xl"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt4.png",
@@ -403,28 +150,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["s"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt6.png",
@@ -436,28 +163,8 @@ export default [
         onSale: true,
         outOfStock: false,
         gender: "women",
-        stocks: [
-            {
-                size: "x-small",
-                quantity: 50
-            },
-            {
-                size: "small",
-                quantity: 100
-            },
-            {
-                size: "medium",
-                quantity: 73
-            },
-            {
-                size: "large",
-                quantity: 110
-            },
-            {
-                size: "x-large",
-                quantity: 200
-            }
-        ],
+        quntity: 0,
+        size: ["s"],
         price: 290.00,
         description: "Aerodynamic race specific jersey",
         altImage: "../src/assets/images/womens-alt7.png",

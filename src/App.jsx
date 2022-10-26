@@ -10,6 +10,7 @@ function App() {
   const [bag, setBag] = useState(() => JSON.parse(localStorage.getItem('bag')) || []);
   const [bagShown, setBagShown] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
+  const [viewProductBy, setViewProductBy] = useState("all")
 
   useEffect(() => {
     localStorage.setItem('bag', JSON.stringify(bag));
@@ -32,6 +33,19 @@ function App() {
     })
   }
 
+  
+  function setGender(value) {
+    if (value === "women") {
+      setViewProductBy("women")
+    }
+    else if (value === "men") {
+      setViewProductBy("men")
+    }
+    else if (value === "all") {
+      setViewProductBy("all")
+    }
+  }
+
   function toggleShoppingBag() {
     setBagShown(prevBagShown => !prevBagShown)
   }
@@ -42,17 +56,32 @@ function App() {
     )
   }
 
-  const productCard = products.map(product =>
-    <Card
-      key={product.id}
-      altImage={product.altImage}
-      mainImage={product.altImage}
-      name={product.name}
-      gender={product.gender}
-      price={product.price}
-      addToBag={() => addToBag(product.id)}
-    />
-  );
+  const productCard =
+    products.map((item) => {
+      if (item.gender === viewProductBy) {
+        return <Card
+          key={item.id}
+          altImage={item.altImage}
+          mainImage={item.altImage}
+          name={item.name}
+          gender={item.gender}
+          price={item.price}
+          addToBag={() => addToBag(item.id)}
+        />
+      }
+      else if (viewProductBy === "all") {
+        return <Card
+          key={item.id}
+          altImage={item.altImage}
+          mainImage={item.altImage}
+          name={item.name}
+          gender={item.gender}
+          price={item.price}
+          addToBag={() => addToBag(item.id)}
+        />
+      }
+    })
+
 
   return (
     <div className="App">
@@ -69,6 +98,11 @@ function App() {
         <div className="product-text">
           <h2>GET READY FOR NEW SEASON SUCCESS</h2>
           <p>The new season colours have landed.</p>
+        </div>
+        <div className="product-sort">
+          <p onClick={() => setGender("all")}>All</p>
+          <p onClick={() => setGender("men")}>Men</p>
+          <p onClick={() => setGender("women")}>Women</p>
         </div>
         {productCard}
       </section>
