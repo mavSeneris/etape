@@ -11,8 +11,6 @@ export default function Card(props) {
                     onMouseOver={e => (e.currentTarget.src = props.mainImage)}
                     onMouseLeave={e => (e.currentTarget.src = props.altImage)}
                 />
-
-
             </div>
             <h4>{props.name}</h4>
             <h5>{props.gender}</h5>

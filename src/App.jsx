@@ -6,11 +6,13 @@ import Card from "./components/Card"
 import products from "./products"
 import Footer from "./components/Footer.jsx"
 
+
 function App() {
   const [bag, setBag] = useState(() => JSON.parse(localStorage.getItem('bag')) || []);
   const [bagShown, setBagShown] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
-  const [viewProductBy, setViewProductBy] = useState("all")
+  const [filterBy, setFilterBy] = useState("all")
+  const [sort, setSort] = useState([])
 
   useEffect(() => {
     localStorage.setItem('bag', JSON.stringify(bag));
@@ -33,16 +35,27 @@ function App() {
     })
   }
 
-  function setCategoryBy(value) {
+  function setFilter(value) {
     if (value === "women") {
-      setViewProductBy("women")
+      setFilterBy("women")
     }
     else if (value === "men") {
-      setViewProductBy("men")
+      setFilterBy("men")
     }
     else if (value === "all") {
-      setViewProductBy("all")
+      setFilterBy("all")
     }
+  }
+
+  const onChange = (e) => {
+    setSort(e.target.value);
+    console.log(e.target.value)
+  }
+  if (sort === "Price Low to High") {
+    products.sort((a, b) => (a.price > b.price ? 1 : -1))
+  }
+  if (sort === "Price High to Low") {
+    products.sort((a, b) => (a.price < b.price ? 1 : -1))
   }
 
   function toggleShoppingBag() {
@@ -57,7 +70,7 @@ function App() {
 
   const productCard =
     products.map((item) => {
-      if (item.gender === viewProductBy || viewProductBy === "all") {
+      if (item.gender === filterBy || filterBy === "all") {
         return <Card
           key={item.id}
           altImage={item.altImage}
@@ -88,20 +101,35 @@ function App() {
         </div>
         <div className="product-sort">
           <p
-            style={{ color: viewProductBy === "all" ? "#EF8354" : "white" }}
-            onClick={() => setCategoryBy("all")}>
+            style={{ color: filterBy === "all" ? "#EF8354" : "white" }}
+            onClick={() => setFilter("all")}>
             All
           </p>
           <p
-            style={{ color: viewProductBy === "men" ? "#EF8354" : "white" }}
-            onClick={() => setCategoryBy("men")}>
+            style={{ color: filterBy === "men" ? "#EF8354" : "white" }}
+            onClick={() => setFilter("men")}>
             Men
           </p>
           <p
-            style={{ color: viewProductBy === "women" ? "#EF8354" : "white" }}
-            onClick={() => setCategoryBy("women")}>
+            style={{ color: filterBy === "women" ? "#EF8354" : "white" }}
+            onClick={() => setFilter("women")}>
             Women
           </p>
+
+          {/* <label htmlFor="select">Sort by?</label> */}
+          <select
+            id="select"
+            // onChange={handleChange}
+            name="select"
+            onChange={onChange}
+            className="pill sort-by"
+          >
+            <option>Sort</option>
+            <option>Price Low to High</option>
+            <option>Price High to Low</option>
+            {/* <option>Newest</option> */}
+          </select>
+
         </div>
         {productCard}
       </section>
