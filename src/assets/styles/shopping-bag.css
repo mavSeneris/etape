@@ -8,7 +8,7 @@
     background-color: #2D3142;
     color: white;
     width: 400px;
-    max-height: 1000px;
+    max-height: 900px;
     border-radius: 10px;
     padding: 20px;
     top: 0;
@@ -22,13 +22,13 @@
     margin: 7px 0;
 }
 
-.bag-item-container-wrapper{
+.bag-item-container-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-height: 700px;
     overflow-y: scroll;
-
+    padding-bottom: 350px;
 }
 
 .bag-item-container {
@@ -107,10 +107,7 @@
     padding-top: 6px;
 }
 
-.button-center{
-    height: 65px;
-    margin-bottom: 10px;
-}
+
 
 .checkout-button {
     width: 60%;
@@ -121,4 +118,9 @@
     border-radius: 8px;
     border: none;
     font-weight: 550;
+}
+
+.button-center {
+    height: 65px;
+    margin-bottom: 10px;
 }
