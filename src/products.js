@@ -146,20 +146,6 @@ export default [
         altImage: "../src/assets/images/womens-alt3.png",
         mainImage: "../src/assets/images/womens-jersey3.png"
     },
-
-    {
-        id: nanoid(),
-        name: "Alt_Road 1/2 Zip Jersey Green",
-        onSale: true,
-        outOfStock: false,
-        quntity: 0,
-        size: ["s"],
-        price: 250.00,
-        gender: "men",
-        description: "Aerodynamic race specific jersey",
-        altImage: "../src/assets/images/mens-alt3.png",
-        mainImage: "../src/assets/images/mens-jersey3.png"
-    },
     {
         id: nanoid(),
         name: "Evolve Pro Air Jersey Pink",

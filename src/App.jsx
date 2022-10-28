@@ -115,9 +115,8 @@ function App() {
             onClick={() => setFilter("women")}>
             Women
           </p>
-
-          {/* <label htmlFor="select">Sort by?</label> */}
-          <select
+        </div>
+        <select
             id="select"
             // onChange={handleChange}
             name="select"
@@ -129,8 +128,6 @@ function App() {
             <option>Price High to Low</option>
             {/* <option>Newest</option> */}
           </select>
-
-        </div>
         {productCard}
       </section>
       <Footer />
