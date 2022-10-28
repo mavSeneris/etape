@@ -5,6 +5,7 @@ import Hero from "./components/Hero"
 import Card from "./components/Card"
 import products from "./products"
 import Footer from "./components/Footer.jsx"
+import { nanoid } from "nanoid"
 
 
 function App() {
@@ -117,17 +118,17 @@ function App() {
           </p>
         </div>
         <select
-            id="select"
-            // onChange={handleChange}
-            name="select"
-            onChange={onChange}
-            className="pill sort-by"
-          >
-            <option>Sort</option>
-            <option>Price Low to High</option>
-            <option>Price High to Low</option>
-            {/* <option>Newest</option> */}
-          </select>
+          id="select"
+          // onChange={handleChange}
+          name="select"
+          onChange={onChange}
+          className="pill sort-by"
+        >
+          <option>Sort</option>
+          <option>Price Low to High</option>
+          <option>Price High to Low</option>
+          {/* <option>Newest</option> */}
+        </select>
         {productCard}
       </section>
       <Footer />
