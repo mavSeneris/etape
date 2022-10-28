@@ -8,6 +8,7 @@
     background-color: #2D3142;
     color: white;
     width: 400px;
+    max-height: 1000px;
     border-radius: 10px;
     padding: 20px;
     top: 0;
@@ -21,11 +22,22 @@
     margin: 7px 0;
 }
 
+.bag-item-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 700px;
+    overflow-y: scroll;
+
+}
+
 .bag-item-container {
+    position: relative;
     display: flex;
     border: 1px white solid;
     border-radius: 10px;
     padding: 15px;
+    margin-right: 20px;
     gap: 15px;
 }
 
@@ -59,8 +71,9 @@
 }
 
 .delete-icon {
+    margin-top: 1px;
     position: relative;
-    left: 53px;
+    left: 38px;
     bottom: 8px;
     width: 20px;
     height: 20px;
@@ -72,7 +85,7 @@
 }
 
 .items-total-price-container {
-    margin: 15px 0 10px 0;
+    margin: 15px 32px 10px 0;
     font-size: 0.9rem;
     display: grid;
     grid-template-columns: auto auto;

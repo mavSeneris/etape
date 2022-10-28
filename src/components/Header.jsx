@@ -84,7 +84,7 @@ export default function Header(props) {
                         />
                         <h4>Your Shopping Bag</h4>
 
-                        {itemElement}
+                        <div className="bag-item-container-wrapper">{itemElement}</div>
 
                         <div className="items-total-price-container">
                             <div className="items-text-wrapper">

@@ -276,10 +276,10 @@ header {
 }
 
 .add-to-bag {
-  width: 60%;
-  min-width: 95px;
+  width: 50%;
+  min-width: 50px;
   height: 10%;
-  min-height: 2rem;
+  min-height: 3rem;
   margin: 7% 15%;
   background: #EF8354;
   color: white;
