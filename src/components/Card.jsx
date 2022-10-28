@@ -8,8 +8,8 @@ export default function Card(props) {
         >
             <div className="card-image">
                 <img src={props.altImage}
-                    // onMouseOver={e => (e.currentTarget.src = props.mainImage)}
-                    // onMouseLeave={e => (e.currentTarget.src = props.altImage)}
+                    onMouseOver={e => (e.currentTarget.src = props.mainImage)}
+                    onMouseLeave={e => (e.currentTarget.src = props.altImage)}
                 />
             </div>
             <h4>{props.name}</h4>

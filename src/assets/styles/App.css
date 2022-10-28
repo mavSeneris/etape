@@ -249,7 +249,6 @@ header {
   width: 100%;
   min-height: 200px;
   object-fit: cover;
-
 }
 
 
@@ -412,7 +411,7 @@ header {
 
 
 /* footer section */
-footer{
+footer {
   display: flex;
   justify-content: center;
   width: 100%;
