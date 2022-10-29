@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-newsletter">
                     <label htmlFor="sign-up">Sign up for our newsletter</label>
-                    <form className="pill">
+                    <form className=" sign-up pill">
                         <input
                             className="email"
                             type="email"

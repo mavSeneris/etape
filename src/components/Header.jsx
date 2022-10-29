@@ -42,6 +42,7 @@ export default function Header(props) {
                 <div className="header-logo-container">
                     <h1 className="logo">ETAPE {'>>'}</h1>
                 </div>
+
                 <nav className="nav-container">
                     <ul className="nav-list">
                         <li className="nav-item">Men</li>
@@ -49,23 +50,20 @@ export default function Header(props) {
                         <li className="nav-item">Stories</li>
                         <li className="nav-item">Club</li>
                         <li className="nav-item">About us</li>
-                        <li className="nav-item right-side">
+                        <li className="nav-item nav-icon-container">
                             <img
                                 src={searchIcon}
                                 className="nav-icons" />
-                        </li>
-                        <li className="nav-item">
                             <img
                                 src={userIcon}
                                 className="nav-icons" />
-                        </li>
-                        <li className="nav-item">
                             <img
                                 src={shopIcon}
                                 onClick={props.toggleShoppingBag}
                                 className="nav-icons" />
                         </li>
                     </ul>
+
                     {props.bag.length > 0 &&
                         <div
                             className="bag-counter">
@@ -106,6 +104,13 @@ export default function Header(props) {
                             </div>
                         </div>}
                 </nav>
+
+
+                <div className="menu-button">
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
             </div>
 
 
