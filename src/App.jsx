@@ -5,7 +5,7 @@ import Hero from "./components/Hero"
 import Card from "./components/Card"
 import products from "./products"
 import Footer from "./components/Footer.jsx"
-import { nanoid } from "nanoid"
+import setPrice from "./controllers/filters/price"
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const [bagShown, setBagShown] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
   const [filterBy, setFilterBy] = useState("all")
-  const [sort, setSort] = useState([])
+  const [sortBy, setSortBy] = useState([])
 
   useEffect(() => {
     localStorage.setItem('bag', JSON.stringify(bag));
@@ -21,43 +21,29 @@ function App() {
 
   useEffect(() => {
     const initialValue = 0
-    const total = bag.reduce((accumulator, current) =>
+    const totalItemsPrice = bag.reduce((accumulator, current) =>
       accumulator + current.price, initialValue)
-    setTotalPrice(total)
+    setTotalPrice(totalItemsPrice)
   })
 
   function addToBag(id) {
-    products.map((item) => {
-      if (item.id === id) {
+    products.map(item => {
+      if (item.id === id)
         setBag(currentBag =>
           [...currentBag, item]
         )
-      }
     })
   }
 
   function setFilter(value) {
-    if (value === "women") {
-      setFilterBy("women")
-    }
-    else if (value === "men") {
-      setFilterBy("men")
-    }
-    else if (value === "all") {
-      setFilterBy("all")
-    }
+    if (value === "women") setFilterBy("women")
+    else if (value === "men") setFilterBy("men")
+    else { setFilterBy("all") }
   }
 
-  const onChange = (e) => {
-    setSort(e.target.value);
-    console.log(e.target.value)
-  }
-  if (sort === "Price Low to High") {
-    products.sort((a, b) => (a.price > b.price ? 1 : -1))
-  }
-  if (sort === "Price High to Low") {
-    products.sort((a, b) => (a.price < b.price ? 1 : -1))
-  }
+  const onChange = e => setSortBy(e.target.value);
+  if (sortBy === "Price Low to High") setPrice.lowToHigh()
+  if (sortBy === "Price High to Low") setPrice.highToLow()
 
   function toggleShoppingBag() {
     setBagShown(prevBagShown => !prevBagShown)
@@ -70,8 +56,8 @@ function App() {
   }
 
   const productCard =
-    products.map((item) => {
-      if (item.gender === filterBy || filterBy === "all") {
+    products.map(item => {
+      if (item.gender === filterBy || filterBy === "all")
         return <Card
           key={item.id}
           altImage={item.altImage}
@@ -81,7 +67,6 @@ function App() {
           price={item.price}
           addToBag={() => addToBag(item.id)}
         />
-      }
     })
 
   return (
@@ -119,7 +104,6 @@ function App() {
         </div>
         <select
           id="select"
-          // onChange={handleChange}
           name="select"
           onChange={onChange}
           className="pill sort-by"
@@ -127,7 +111,6 @@ function App() {
           <option>Sort</option>
           <option>Price Low to High</option>
           <option>Price High to Low</option>
-          {/* <option>Newest</option> */}
         </select>
         {productCard}
       </section>
