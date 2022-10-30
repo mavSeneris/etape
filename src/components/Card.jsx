@@ -16,7 +16,7 @@ export default function Card(props) {
             <h5>{props.gender}</h5>
             <p>${props.price}</p>
 
-            <button className="add-to-bag" onClick={props.addToBag}>add to bag</button>
+            <button className="add-to-bag" onClick={props.addItemToShoppingBag}>add to bag</button>
         </div>
     )
 }

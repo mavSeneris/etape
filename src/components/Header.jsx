@@ -69,7 +69,7 @@ export default function Header(props) {
                             className="bag-counter">
                             {props.bag.length}
                         </div>}
-                    {!props.bagShown || props.bag.length > 0 &&
+                    {!props.showShoppingBag || props.bag.length > 0 &&
                         <div className="shopping-bag-container">
                             <img
                                 onClick={props.toggleShoppingBag}

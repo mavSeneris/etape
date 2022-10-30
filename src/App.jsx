@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from "react";
-import "./assets/styles/App.css"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
-import products from "./products"
 import Footer from "./components/Footer.jsx"
-import setPrice from "./controllers/filters/price"
-
+import productsPrice from "./controllers/filters/products"
+import products from "./products"
+import "./assets/styles/App.css"
 
 function App() {
-  const [bag, setBag] = useState(() => JSON.parse(localStorage.getItem('bag')) || []);
-  const [bagShown, setBagShown] = useState(false)
+  const [shoppingBag, setShoppingBag] = useState(() => JSON.parse(localStorage.getItem('shoppingBag')) || []);
+  const [showShoppingBag, setShowShoppingBag] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
   const [filterBy, setFilterBy] = useState("all")
   const [sortBy, setSortBy] = useState([])
 
+  // Saves shopping bag items to user's browser local storage
   useEffect(() => {
-    localStorage.setItem('bag', JSON.stringify(bag));
-  }, [bag])
+    localStorage.setItem('shoppingBag', JSON.stringify(shoppingBag));
+  }, [shoppingBag])
 
   useEffect(() => {
-    const initialValue = 0
-    const totalItemsPrice = bag.reduce((accumulator, current) =>
-      accumulator + current.price, initialValue)
+    const initialTotalPrice = 0
+    const totalItemsPrice = shoppingBag.reduce((accumulator, current) =>
+      accumulator + current.price, initialTotalPrice)
     setTotalPrice(totalItemsPrice)
   })
 
-  function addToBag(id) {
+  function addItemToShoppingBag(id) {
     products.map(item => {
       if (item.id === id)
-        setBag(currentBag =>
-          [...currentBag, item]
+        setShoppingBag(currentItems =>
+          [ ...currentItems, item]
         )
     })
   }
@@ -42,20 +42,20 @@ function App() {
   }
 
   const onChange = e => setSortBy(e.target.value);
-  if (sortBy === "Price Low to High") setPrice.lowToHigh()
-  if (sortBy === "Price High to Low") setPrice.highToLow()
+  if (sortBy === "Price Low to High") productsPrice.lowToHigh()
+  if (sortBy === "Price High to Low") productsPrice.highToLow()
 
   function toggleShoppingBag() {
-    setBagShown(prevBagShown => !prevBagShown)
+    setShowShoppingBag(ShowShoppingBag => !ShowShoppingBag)
   }
 
   function deleteBagItem(event, itemId) {
     event.stopPropagation()
-    setBag(prevBag =>
-      prevBag.filter(item => item.id !== itemId))
+    setShoppingBag(currentBagItems =>
+      currentBagItems.filter(item => item.id !== itemId))
   }
 
-  const productCard =
+  const productCards =
     products.map(item => {
       if (item.gender === filterBy || filterBy === "all")
         return <Card
@@ -65,7 +65,7 @@ function App() {
           name={item.name}
           gender={item.gender}
           price={item.price}
-          addToBag={() => addToBag(item.id)}
+          addItemToShoppingBag={() => addItemToShoppingBag(item.id)}
         />
     })
 
@@ -73,8 +73,8 @@ function App() {
     <div className="App">
 
       <Header
-        bag={bag}
-        bagShown={bagShown}
+        bag={shoppingBag}
+        showShoppingBag={showShoppingBag}
         toggleShoppingBag={toggleShoppingBag}
         deleteBagItem={deleteBagItem}
         totalPrice={totalPrice}
@@ -112,7 +112,7 @@ function App() {
           <option>Price Low to High</option>
           <option>Price High to Low</option>
         </select>
-        {productCard}
+        {productCards}
       </section>
       <Footer />
 
