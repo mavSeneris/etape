@@ -1,3 +1,17 @@
+:root {
+    --clr-primary: #2D3142;
+    --clr-secondary: #4F5D75;
+    --color-neutral: #BFC0C0;
+    --clr-accent: #EF8354;
+    --clr-light: #FFFFFF;
+    --clr-dark: #000000;
+
+    /* typography */
+    --font-clr-primary: #FFFFFF;
+    --font-clr-secondary: #2D3142;
+}
+
+
 .shopping-bag-container {
     position: absolute;
     margin-top: 50px;
@@ -5,8 +19,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: #2D3142;
-    color: white;
+    background-color: var(--clr-primary);
+    color:var(--font-clr-primary);
     width: 400px;
     max-height: 900px;
     border-radius: 10px;
@@ -35,7 +49,7 @@
 .bag-item-container {
     position: relative;
     display: flex;
-    border: 1px white solid;
+    border: 1px var(--color-neutral) solid;
     border-radius: 10px;
     padding: 15px;
     margin-right: 20px;
@@ -78,7 +92,7 @@
     bottom: 8px;
     width: 20px;
     height: 20px;
-    fill: whitesmoke;
+    fill: var(--color-neutral);
 }
 
 .price {
@@ -101,7 +115,7 @@
 }
 
 .sub-total {
-    border-top: 1px solid #bfc0c06e;
+    border-top: 1px solid var(--color-neutral);
 }
 
 .sub-total h4 {
@@ -114,8 +128,8 @@
     width: 60%;
     height: 2.5rem;
     margin: 7% 15%;
-    background: #EF8354;
-    color: white;
+    background: var(--clr-accent);
+    color: var(--font-clr-primary);
     border-radius: 8px;
     border: none;
     font-weight: 550;
