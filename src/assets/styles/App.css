@@ -93,7 +93,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-secondary);
   /* justify-content: center; */
 }
 
@@ -274,40 +274,10 @@ header {
 
 /** HERO*/
 .hero {
-  background-image: url("../images/hero-image1.jpg");
-  width: 100%;
-  max-width: 2000px;
-  min-height: 1000px;
-  /* max-width: 2000px; */
-  /* You must set a specified height */
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
+  /* background-image: url("../images/hero-image1.jpg"); */
   position: relative;
-  text-align: center;
-  color: var(--font-clr-primary);
-}
-
-.text-wrapper {
-  position: absolute;
-  bottom: 40px;
-  left: 16px;
-  text-align: start;
-  /* height: 1000px; */
-}
-
-.hero h1 {
-  letter-spacing: 0.245em;
-  font-weight: 750;
-  font-size: 5rem;
-}
-
-.hero p {
-  width: 50%;
-  margin-top: 13px;
+  width: 100vw;
+  max-width: 2000px;
 }
 
 /* ... */

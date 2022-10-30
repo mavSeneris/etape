@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import shopIcon from "../assets/icons/shop-icon.png"
 import searchIcon from "../assets/icons/search-icon.png"
 import userIcon from "../assets/icons/user-icon.png"
@@ -7,31 +7,40 @@ import backArrowIcon from "../assets/icons/back-icon.png"
 import { nanoid } from "nanoid";
 
 
+export default function Header({ shoppingBag, setShoppingBag }) {
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [showShoppingBag, setShowShoppingBag] = useState(false)
 
+    useEffect(() => {
+        const initialTotalPrice = 0
+        const totalItemsPrice = shoppingBag.reduce((accumulator, current) =>
+            accumulator + current.price, initialTotalPrice)
+        setTotalPrice(totalItemsPrice)
+    })
 
-export default function Header(props) {
+    function toggleShoppingBag() {
+        setShowShoppingBag(ShowShoppingBag => !ShowShoppingBag)
+    }
 
-    const itemElement = props.bag.map(item =>
-        <div
-            className="bag-item-container"
+    function deleteBagItem(event, itemId) {
+        event.stopPropagation()
+        setShoppingBag(currentBagItems =>
+            currentBagItems.filter(item => item.id !== itemId))
+    }
+
+    const itemElement = shoppingBag.map(item =>
+        <div className="bag-item-container"
             key={nanoid()}
         >
-            <img
-                src={item.mainImage}
-                className="bag-item-image"
-
-            />
-
+            <img src={item.mainImage} className="bag-item-image" />
             <div className="shopping-bag-item-text">
                 <h5>{item.name}</h5>
                 <p>{item.gender}</p>
                 <p className="price">{`$${item.price}.00`}</p>
             </div>
-
-            <img
-                onClick={(event) => props.deleteBagItem(event, item.id)}
+            <img className="delete-icon"
+                onClick={(event) => deleteBagItem(event, item.id)}
                 src={deleteIcon}
-                className="delete-icon"
             />
         </div>
     );
@@ -51,30 +60,20 @@ export default function Header(props) {
                         <li className="nav-item">Club</li>
                         <li className="nav-item">About us</li>
                         <li className="nav-item nav-icon-container">
-                            <img
-                                src={searchIcon}
-                                className="nav-icons" />
-                            <img
-                                src={userIcon}
-                                className="nav-icons" />
-                            <img
-                                src={shopIcon}
-                                onClick={props.toggleShoppingBag}
-                                className="nav-icons" />
+                            <img className="nav-icons" src={searchIcon} />
+                            <img className="nav-icons" src={userIcon} />
+                            <img className="nav-icons" src={shopIcon}
+                                onClick={toggleShoppingBag}
+                            />
                         </li>
                     </ul>
 
-                    {props.bag.length > 0 &&
-                        <div
-                            className="bag-counter">
-                            {props.bag.length}
-                        </div>}
-                    {!props.showShoppingBag || props.bag.length > 0 &&
+                    {shoppingBag.length > 0 &&
+                        <div className="bag-counter">{shoppingBag.length}</div>}
+                    {!showShoppingBag || shoppingBag.length > 0 &&
                         <div className="shopping-bag-container">
-                            <img
-                                onClick={props.toggleShoppingBag}
-                                src={backArrowIcon}
-                                className="back-arrow-icon"
+                            <img className="back-arrow-icon" src={backArrowIcon}
+                                onClick={toggleShoppingBag}
                             />
                             <h4>Your Shopping Bag</h4>
                             <div className="bag-item-container-wrapper">{itemElement}</div>
@@ -84,7 +83,7 @@ export default function Header(props) {
                                     <p>Delivery</p>
                                 </div>
                                 <div className="items-text-wrapper">
-                                    <p>${props.totalPrice}.00</p>
+                                    <p>${totalPrice}.00</p>
                                     <p>$4.59</p>
                                 </div>
                             </div>
@@ -93,7 +92,7 @@ export default function Header(props) {
                                     <h4>Subtotal:</h4>
                                 </div>
                                 <div className="items-text-wrapper">
-                                    <h4>{`$${props.totalPrice + 4.59}`}</h4>
+                                    <h4>{`$${totalPrice + 4.59}`}</h4>
                                 </div>
                             </div>
                             <div className="button-center">
@@ -104,16 +103,12 @@ export default function Header(props) {
                             </div>
                         </div>}
                 </nav>
-
-
                 <div className="menu-button">
                     <div className="line1"></div>
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </div>
             </div>
-
-
         </header >
     )
 }
