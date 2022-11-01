@@ -6,17 +6,17 @@ export default function Card(props) {
         <div
             className="product-card"
         >
-            <div className="card-image">
+            <div className="product-card-image">
                 <img src={props.altImage}
                     onMouseOver={e => (e.currentTarget.src = props.mainImage)}
                     onMouseLeave={e => (e.currentTarget.src = props.altImage)}
                 />
             </div>
-            <h4>{props.name}</h4>
-            <h5>{props.gender}</h5>
-            <p>${props.price}</p>
+            <h4 className="product-name">{props.name}</h4>
+            <h5 className="product-gender">{props.gender}</h5>
+            <p className="product-price">${props.price}</p>
 
-            <button className="add-to-bag" onClick={props.addItemToShoppingBag}>add to bag</button>
+            <button className="btn-add-to-bag" onClick={props.addItemToShoppingBag}>add to bag</button>
         </div>
     )
 }

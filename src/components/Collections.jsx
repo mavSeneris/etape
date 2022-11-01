@@ -5,7 +5,7 @@ import productsPrice from "../controllers/filters/products"
 
 export default function Collection({ setShoppingBag }) {
   const [filterBy, setFilterBy] = useState("all")
-  const [sortBy, setSortBy] = useState([])
+  const [sortBy, setSortBy] = useState()
 
   function setFilter(value) {
     if (value === "women") setFilterBy("women")
@@ -46,7 +46,7 @@ export default function Collection({ setShoppingBag }) {
         <h2>GET READY FOR NEW SEASON SUCCESS</h2>
         <p>The new season colours have landed.</p>
       </div>
-      <div className="product-sort">
+      <div className="product-filter">
         <p
           style={{ color: filterBy === "all" ? "#EF8354" : "white" }}
           onClick={() => setFilter("all")}>

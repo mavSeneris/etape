@@ -63,73 +63,68 @@ export default function Header({ shoppingBag, setShoppingBag }) {
 
     return (
         <header >
-            <div className="header-nav-container">
-                <div className="header-logo-container">
-                    <h1 className="logo">ETAPE {'>>'}</h1>
+            <div className="header-container">
+                <div className="header-nav-container">
+                    <div className="header-logo-container">
+                        <h1 className="logo">ETAPE {'>>'}</h1>
+                    </div>
+                    {toggleMenu && <nav className="nav-container">
+                        <ul className="nav-list">
+                            <li className="nav-item">Men</li>
+                            <li className="nav-item">Women</li>
+                            <li className="nav-item">Stories</li>
+                            <li className="nav-item">Club</li>
+                            <li className="nav-item">About us</li>
+                            <li className="nav-item nav-icon-container">
+                                {shoppingBag.length > 0 &&
+                                    <div className="bag-counter"><p>{shoppingBag.length}</p></div>
+                                }
+                                <img className="nav-icons" src={searchIcon} />
+                                <img className="nav-icons" src={userIcon} />
+                                <img className="nav-icons" src={shopIcon}
+                                    onClick={toggleShoppingBag}
+                                />
+                            </li>
+                        </ul>
+                        {!showShoppingBag || shoppingBag.length > 0 &&
+                            <div className="shopping-bag-container">
+                                <img className="back-arrow-icon" src={backArrowIcon}
+                                    onClick={toggleShoppingBag}
+                                />
+                                <h4>Your Shopping Bag</h4>
+                                <div className="bag-item-container-wrapper">{itemElement}</div>
+                                <div className="items-total-price-container">
+                                    <div className="items-text-wrapper">
+                                        <p>Bag total:</p>
+                                        <p>Delivery</p>
+                                    </div>
+                                    <div className="items-text-wrapper">
+                                        <p>${totalPrice}.00</p>
+                                        <p>$4.59</p>
+                                    </div>
+                                </div>
+                                <div className="items-total-price-container sub-total">
+                                    <div className="items-text-wrapper">
+                                        <h4>Subtotal:</h4>
+                                    </div>
+                                    <div className="items-text-wrapper">
+                                        <h4>{`$${totalPrice + 4.59}`}</h4>
+                                    </div>
+                                </div>
+                                <div className="button-center">
+                                    <button
+                                        className="checkout-button">
+                                        Proceed to Checkout
+                                    </button>
+                                </div>
+                            </div>}
+                    </nav>}
                 </div>
-
-                {toggleMenu && <nav className="nav-container">
-                    <ul className="nav-list">
-                        <li className="nav-item">Men</li>
-                        <li className="nav-item">Women</li>
-                        <li className="nav-item">Stories</li>
-                        <li className="nav-item">Club</li>
-                        <li className="nav-item">About us</li>
-                        <li className="nav-item nav-icon-container">
-                            {shoppingBag.length > 0 &&
-                                <div className="bag-counter">{shoppingBag.length}</div>
-                            }
-                            <img className="nav-icons" src={searchIcon} />
-                            <img className="nav-icons" src={userIcon} />
-
-                            <img className="nav-icons" src={shopIcon}
-                                onClick={toggleShoppingBag}
-                            />
-
-
-                        </li>
-                    </ul>
-
-
-                    {!showShoppingBag || shoppingBag.length > 0 &&
-                        <div className="shopping-bag-container">
-                            <img className="back-arrow-icon" src={backArrowIcon}
-                                onClick={toggleShoppingBag}
-                            />
-                            <h4>Your Shopping Bag</h4>
-                            <div className="bag-item-container-wrapper">{itemElement}</div>
-                            <div className="items-total-price-container">
-                                <div className="items-text-wrapper">
-                                    <p>Bag total:</p>
-                                    <p>Delivery</p>
-                                </div>
-                                <div className="items-text-wrapper">
-                                    <p>${totalPrice}.00</p>
-                                    <p>$4.59</p>
-                                </div>
-                            </div>
-                            <div className="items-total-price-container sub-total">
-                                <div className="items-text-wrapper">
-                                    <h4>Subtotal:</h4>
-                                </div>
-                                <div className="items-text-wrapper">
-                                    <h4>{`$${totalPrice + 4.59}`}</h4>
-                                </div>
-                            </div>
-                            <div className="button-center">
-                                <button
-                                    className="checkout-button">
-                                    Proceed to Checkout
-                                </button>
-                            </div>
-                        </div>}
-                </nav>}
-
-            </div>
-            <div onClick={showMenu} className="menu-button">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
+                <div onClick={showMenu} className="menu-button">
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
             </div>
         </header >
     )

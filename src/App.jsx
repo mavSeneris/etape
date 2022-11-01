@@ -15,9 +15,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header shoppingBag={shoppingBag} setShoppingBag={setShoppingBag} />
+      <Header
+        shoppingBag={shoppingBag}
+        setShoppingBag={setShoppingBag} />
       <Hero />
-      <Collections setShoppingBag={setShoppingBag} />
+      <Collections
+        setShoppingBag={setShoppingBag} />
       <Footer />
     </div>
   )
