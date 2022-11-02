@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "./Card"
 import products from "../products"
 import productsPrice from "../controllers/filters/products"
+import { nanoid } from "nanoid";
 
 export default function Collection({ setShoppingBag }) {
   const [filterBy, setFilterBy] = useState("all")
@@ -19,10 +20,17 @@ export default function Collection({ setShoppingBag }) {
 
   function addItemToShoppingBag(id) {
     products.map(item => {
-      if (item.id === id)
+      if (item.id === id) {
         setShoppingBag(currentItems =>
           [...currentItems, item]
         )
+      } else {
+        setShoppingBag(currentItems => {
+          return currentItems.map((item) => {
+            return item.id === id ? { ...item, id: nanoid() } : item
+          })
+        })
+      }
     })
   }
 

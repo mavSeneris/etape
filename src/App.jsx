@@ -12,6 +12,8 @@ function App() {
     localStorage.setItem('shoppingBag', JSON.stringify(shoppingBag));
   }, [shoppingBag])
 
+  console.log(shoppingBag)
+
 
   return (
     <div className="App">
