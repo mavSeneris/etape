@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+   import React, { useState, useEffect } from "react";
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Collections from "./components/Collections";
@@ -22,7 +22,9 @@ function App() {
         setShoppingBag={setShoppingBag} />
       <Hero />
       <Collections
-        setShoppingBag={setShoppingBag} />
+        setShoppingBag={setShoppingBag}  
+        shoppingBag={shoppingBag}
+        />
       <Footer />
     </div>
   )

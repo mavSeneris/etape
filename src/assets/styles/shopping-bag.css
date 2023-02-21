@@ -22,7 +22,8 @@
     background-color: var(--clr-primary);
     color:var(--font-clr-primary);
     width: 400px;
-    max-height: 900px;
+    max-height: calc(100vh - 100px);
+    height: 100vh;
     border-radius: 10px;
     padding: 20px;
     top: 0;
